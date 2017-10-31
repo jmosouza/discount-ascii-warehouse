@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductFace 1`] = `
+<p
+  style={
+    Object {
+      "fontSize": 12,
+    }
+  }
+>
+  ¯_(ツ)_/¯
+</p>
+`;
