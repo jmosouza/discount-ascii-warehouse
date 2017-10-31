@@ -1,0 +1,5 @@
+# Keep existing server code as-is
+index.js
+/lib/*
+/node_modules/*
+/static/*

@@ -8,3 +8,7 @@ This is an **unusual** kind of changelog, which I decided to call "story". Inste
 2. Testing server on Postman
 3. Building minimal docs on Postman for reference
 4. Git: initialize git, gitignore, commit server code and start branch `boilerplate`
+
+## 2nd hour of work
+
+1. ESLint: extend airbnb and ignore server files
