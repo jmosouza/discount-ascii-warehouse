@@ -23,3 +23,7 @@ I though of saving this hour by using a generator tool like `create-react-app`, 
 - Product date, price and size components with specs
 
 Jest is using options `--watch --coverage`.
+
+## 4th hour of work
+
+- Relative date interval
