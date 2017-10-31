@@ -20,3 +20,5 @@ I though of saving this hour by using a generator tool like `create-react-app`, 
 ## 3rd hour of work
 
 - Jest: install and write ProductFace spec
+
+Jest is using options `--watch --coverage`.
