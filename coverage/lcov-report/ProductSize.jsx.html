@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for ProductFace.jsx</title>
+    <title>Code coverage report for ProductSize.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="index.html">All files</a> ProductFace.jsx
+      <a href="index.html">All files</a> ProductSize.jsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -55,8 +55,7 @@
 10
 11
 12
-13
-14</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+13</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -64,7 +63,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -72,16 +70,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import PropTypes from 'prop-types';
 &nbsp;
-const ProductFace = ({ size, face }) =&gt; (
-  &lt;p style={{ fontSize: size }}&gt;{face}&lt;/p&gt;
+const ProductSize = ({ size }) =&gt; (
+  &lt;p&gt;Size: {size}&lt;/p&gt;
 );
 &nbsp;
-ProductFace.propTypes = {
+ProductSize.propTypes = {
   size: PropTypes.number.isRequired,
-  face: PropTypes.string.isRequired,
 };
 &nbsp;
-export default ProductFace;
+export default ProductSize;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

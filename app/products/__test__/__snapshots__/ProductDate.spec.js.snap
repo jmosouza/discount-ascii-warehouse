@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDate 1`] = `
+<p>
+  Mon Oct 23 2017 11:23:20 GMT-0300 (-03)
+</p>
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductSize 1`] = `
+<p>
+  Size: 
+  12
+</p>
+`;
