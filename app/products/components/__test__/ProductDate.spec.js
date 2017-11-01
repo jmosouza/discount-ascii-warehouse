@@ -17,6 +17,7 @@ mockDateDotNow();
   'Sun Oct 22 2017 12:00:00 GMT-0000 (-00)',
   'Sat Oct 21 2017 12:00:00 GMT-0000 (-00)',
   'Fri Oct 20 2017 12:00:00 GMT-0000 (-00)',
+  'Fri Oct 16 2017 12:00:00 GMT-0000 (-00)',
 ].forEach((dateStr) => {
   test('ProductDate', () => {
     expect(renderer.create(

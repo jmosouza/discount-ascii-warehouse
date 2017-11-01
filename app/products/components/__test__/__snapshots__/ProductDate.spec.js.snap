@@ -59,3 +59,9 @@ exports[`ProductDate 10`] = `
   3 days ago
 </p>
 `;
+
+exports[`ProductDate 11`] = `
+<p>
+  10/16/2017
+</p>
+`;
