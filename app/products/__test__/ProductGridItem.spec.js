@@ -2,6 +2,9 @@
 import renderer from 'react-test-renderer';
 import React from 'react';
 import ProductGridItem from '../ProductGridItem';
+import mockDateDotNow from '../../__test__/mockDateDotNow';
+
+mockDateDotNow();
 
 test('ProductGridItem', () => {
   const product = {
@@ -9,7 +12,7 @@ test('ProductGridItem', () => {
     size: 22,
     price: 27,
     face: '( .-. )',
-    date: 'Mon Oct 23 2017 11:23:20 GMT-0300 (-03)',
+    date: 'Mon Oct 23 2017 11:00:00 GMT-0000 (-00)',
   };
   expect(renderer.create(
     <ProductGridItem {...product} />,

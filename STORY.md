@@ -29,11 +29,15 @@ Jest is using options `--watch --coverage`.
 ## 4th hour of work
 
 - Relative date interval
-- Recording debugging video
+- Record debugging video
 
 # Day 2
 
 ## 1st hour of work
 
-- Testing and refactoring relativeDateInterval and ProductDate
-- Recording testing video
+- Test and refactoring relativeDateInterval and ProductDate
+- Record testing video
+
+## 2nd hour of work
+
+- Extract Date.now mock and use in ProductGridItem spec

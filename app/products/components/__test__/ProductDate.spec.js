@@ -1,15 +1,10 @@
-/* global test, expect, afterAll */
+/* global test, expect */
 import renderer from 'react-test-renderer';
 import React from 'react';
 import ProductDate from '../ProductDate';
+import mockDateDotNow from '../../../__test__/mockDateDotNow';
 
-const actualNow = Date.now;
-const mockedNow = new Date('Mon Oct 23 2017 12:00:00 GMT-0000 (-00)').getTime();
-Date.now = () => mockedNow;
-
-afterAll(() => {
-  Date.now = actualNow;
-});
+mockDateDotNow();
 
 [
   'Mon Oct 23 2017 13:00:00 GMT-0000 (-00)',
