@@ -24,7 +24,7 @@ I though of saving this hour by using a generator tool like `create-react-app`, 
 - Jest: install and write ProductFace spec
 - Product date, price and size components with specs
 
-Jest is using options `--watch --coverage`.
+Jest is using options `--watch --coverage`. I would normally ignore the `/coverage` directory in git, but this time I checked it in to make it easily available to the coding challenge evaluators.
 
 ## 4th hour of work
 
@@ -35,9 +35,12 @@ Jest is using options `--watch --coverage`.
 
 ## 1st hour of work
 
-- Test and refactoring relativeDateInterval and ProductDate
+- Test and refactor relativeDateInterval and ProductDate
 - Record testing video
 
 ## 2nd hour of work
 
 - Extract Date.now mock and use in ProductGridItem spec
+- ProductGrid component with spec
+
+This was a shorter day because my current work took more time than usual.

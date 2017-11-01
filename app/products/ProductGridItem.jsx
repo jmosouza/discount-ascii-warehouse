@@ -1,14 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ProductFace from './components/ProductFace';
 import ProductSize from './components/ProductSize';
 import ProductPrice from './components/ProductPrice';
 import ProductDate from './components/ProductDate';
+import productPropTypesShape from './productPropTypesShape';
 
 const ProductGridItem = ({
-  size, price, face, date,
+  id, size, price, face, date,
 }) => (
-  <div>
+  <div key={id}>
     <ProductFace face={face} size={size} />
     <ProductSize size={size} />
     <ProductPrice price={price} />
@@ -16,11 +16,6 @@ const ProductGridItem = ({
   </div>
 );
 
-ProductGridItem.propTypes = {
-  size: PropTypes.number.isRequired,
-  price: PropTypes.number.isRequired,
-  face: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-};
+ProductGridItem.propTypes = productPropTypesShape;
 
 export default ProductGridItem;
