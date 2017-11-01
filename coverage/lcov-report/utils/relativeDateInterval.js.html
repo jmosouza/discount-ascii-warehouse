@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">68% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>17/25</span>
+        <span class='fraction'>27/27</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>8/16</span>
+        <span class='fraction'>18/18</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,13 +35,13 @@
         <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">68% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>17/25</span>
+        <span class='fraction'>27/27</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -84,44 +84,48 @@
 39
 40
 41
-42</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+42
+43
+44</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -133,7 +137,7 @@
 */
 const relativeDateInterval = ({ dateStr }) =&gt; {
   const date = new Date(dateStr);
-  const delta = Math.round((+new Date() - date) / 1000);
+  const delta = Math.round((Date.now() - date) / 1000);
 &nbsp;
   const minute = 60;
   const hour = minute * 60;
@@ -142,22 +146,24 @@ const relativeDateInterval = ({ dateStr }) =&gt; {
 &nbsp;
   let fuzzy;
 &nbsp;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (delta &lt; 30) {
-<span class="cstat-no" title="statement not covered" >    fuzzy = 'just then.';</span>
-  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (delta &lt; minute) {
-<span class="cstat-no" title="statement not covered" >    fuzzy = `${delta} seconds ago.`;</span>
-  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (delta &lt; 2 * minute) {
-<span class="cstat-no" title="statement not covered" >    fuzzy = 'a minute ago.';</span>
-  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (delta &lt; hour) {
-<span class="cstat-no" title="statement not covered" >    fuzzy = `${Math.floor(delta / minute)} minutes ago.`;</span>
-  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (Math.floor(delta / hour) === 1) {
-<span class="cstat-no" title="statement not covered" >    fuzzy = '1 hour ago.';</span>
-  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (delta &lt; day) {
-<span class="cstat-no" title="statement not covered" >    fuzzy = `${Math.floor(delta / hour)} hours ago.`;</span>
-  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (delta &lt; day * 2) {
-<span class="cstat-no" title="statement not covered" >    fuzzy = 'yesterday';</span>
-  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (delta &lt; week) {
-<span class="cstat-no" title="statement not covered" >    fuzzy = `${Math.floor(delta / day)} days ago.`;</span>
+  if (delta &lt; 0) {
+    fuzzy = 'comming soon';
+  } else if (delta &lt; 30) {
+    fuzzy = 'just then';
+  } else if (delta &lt; minute) {
+    fuzzy = `${delta} seconds ago`;
+  } else if (delta &lt; 2 * minute) {
+    fuzzy = 'a minute ago';
+  } else if (delta &lt; hour) {
+    fuzzy = `${Math.floor(delta / minute)} minutes ago`;
+  } else if (Math.floor(delta / hour) === 1) {
+    fuzzy = '1 hour ago';
+  } else if (delta &lt; day) {
+    fuzzy = `${Math.floor(delta / hour)} hours ago`;
+  } else if (delta &lt; day * 2) {
+    fuzzy = 'yesterday';
+  } else if (delta &lt; week) {
+    fuzzy = `${Math.floor(delta / day)} days ago`;
   } else {
     fuzzy = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
   }
@@ -172,7 +178,7 @@ export default relativeDateInterval;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 31 2017 17:56:23 GMT-0300 (-03)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 01 2017 18:10:18 GMT-0300 (-03)
 </div>
 </div>
 <script src="../prettify.js"></script>

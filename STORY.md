@@ -2,6 +2,8 @@
 
 This is an **unusual** kind of changelog, which I decided to call "story". Instead of listing only changes in code, I also comment the development process. The goal of this file is to make it easier for the application review team to evaluate my steps.
 
+# Day 1
+
 ## 1st hour of work
 
 1. Quick overview of backend code
@@ -27,3 +29,11 @@ Jest is using options `--watch --coverage`.
 ## 4th hour of work
 
 - Relative date interval
+- Recording debugging video
+
+# Day 2
+
+## 1st hour of work
+
+- Testing and refactoring relativeDateInterval and ProductDate
+- Recording testing video
