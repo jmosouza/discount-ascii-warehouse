@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProductFace from './ProductFace';
-import ProductSize from './ProductSize';
-import ProductPrice from './ProductPrice';
-import ProductDate from './ProductDate';
+import ProductFace from './components/ProductFace';
+import ProductSize from './components/ProductSize';
+import ProductPrice from './components/ProductPrice';
+import ProductDate from './components/ProductDate';
 
 const ProductGridItem = ({
   size, price, face, date,
