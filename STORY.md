@@ -55,3 +55,8 @@ Busy with current job
 
 - Tidy up project: install missing eslint plugins, gitignore coverage directory, extract prop types into own file, rearrange products components and containers
 - ProductGrid container with specs
+
+## Hour 3
+
+- Fetch NDJSON products in AsciiStore
+- Record new tech video
