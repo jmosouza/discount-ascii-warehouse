@@ -44,3 +44,14 @@ Jest is using options `--watch --coverage`. I would normally ignore the `/covera
 - ProductGrid component with spec
 
 This was a shorter day because my job took more time than usual.
+
+# Days 3 & 4
+
+Busy with current job
+
+# Day 5
+
+## Hours 1 & 2
+
+- Tidy up project: install missing eslint plugins, gitignore coverage directory, extract prop types into own file, rearrange products components and containers
+- ProductGrid container with specs

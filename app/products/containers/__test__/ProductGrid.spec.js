@@ -3,7 +3,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
 import ProductGrid from '../ProductGrid';
-import sampleProducts from '../../__test__/sampleProducts';
+import sampleProducts from '../../components/__test__/sampleProducts';
 
 const initialState = {
   entities: {
