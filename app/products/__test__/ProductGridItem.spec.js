@@ -1,10 +1,7 @@
 /* global test, expect */
-import renderer from 'react-test-renderer';
 import React from 'react';
+import renderer from 'react-test-renderer';
 import ProductGridItem from '../ProductGridItem';
-import mockDateDotNow from '../../__test__/mockDateDotNow';
-
-mockDateDotNow();
 
 test('ProductGridItem', () => {
   const product = {

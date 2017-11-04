@@ -1,10 +1,7 @@
 /* global test, expect */
-import renderer from 'react-test-renderer';
 import React from 'react';
+import renderer from 'react-test-renderer';
 import ProductDate from '../ProductDate';
-import mockDateDotNow from '../../../__test__/mockDateDotNow';
-
-mockDateDotNow();
 
 [
   'Mon Oct 23 2017 13:00:00 GMT-0000 (-00)',
