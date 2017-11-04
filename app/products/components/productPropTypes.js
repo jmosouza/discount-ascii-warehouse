@@ -11,6 +11,6 @@ export const productPropTypes = {
 
 // For the collection, it's best not to set a specific name or mark as required
 // because those decisions are up to the component that uses the collection.
-export const productCollectionPropTypes = PropTypes.objectOf(
+export const productCollectionPropTypes = PropTypes.arrayOf(
   PropTypes.shape(productPropTypes),
 );

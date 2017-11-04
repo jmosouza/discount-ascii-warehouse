@@ -1,5 +1,8 @@
 module.exports = {
   entry: './app/App.jsx',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   output: {
     path: `${__dirname}/static`,
     filename: 'bundle.js',
