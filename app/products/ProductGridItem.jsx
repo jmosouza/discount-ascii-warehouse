@@ -3,7 +3,7 @@ import ProductFace from './components/ProductFace';
 import ProductSize from './components/ProductSize';
 import ProductPrice from './components/ProductPrice';
 import ProductDate from './components/ProductDate';
-import productPropTypesShape from './productPropTypesShape';
+import { productPropTypes } from './productPropTypes';
 
 const ProductGridItem = ({
   id, size, price, face, date,
@@ -16,6 +16,6 @@ const ProductGridItem = ({
   </div>
 );
 
-ProductGridItem.propTypes = productPropTypesShape;
+ProductGridItem.propTypes = productPropTypes;
 
 export default ProductGridItem;

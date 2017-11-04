@@ -1,15 +1,14 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import ProductGridItem from './ProductGridItem';
-import productPropTypesShape from './productPropTypesShape';
+import { productCollectionPropTypes } from './productPropTypes';
 
 const ProductGrid = ({ products }) => (
   Object.values(products).map(ProductGridItem)
 );
 
 ProductGrid.propTypes = {
-  products: PropTypes.objectOf(
-    PropTypes.shape(productPropTypesShape),
-  ).isRequired,
+  products: productCollectionPropTypes,
 };
 
 export default ProductGrid;
