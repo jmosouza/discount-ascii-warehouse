@@ -20,14 +20,15 @@ class AsciiStore extends Component {
         <header>
           <h1>Ascii Faces</h1>
         </header>
-        {/* TODO: hasMore should be in props */}
         <InfiniteScroll
+          pageStart={-1}
           hasMore={this.props.hasMoreProducts}
           loadMore={this.handleLoadMore}
           loader={<div>Loading...</div>}
         >
           <ProductGrid products={this.props.products} />
         </InfiniteScroll>
+        {this.props.hasMoreProducts || <div>~ end of catalogue ~</div>}
       </div>
     );
   }

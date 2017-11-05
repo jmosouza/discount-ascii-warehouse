@@ -15,7 +15,7 @@ export const fetchProductsNoMore = () => ({
 export default ({ page = 0 }) => (dispatch) => {
   let noMore = true;
   const skip = page * API_PER_PAGE;
-  fetch(`${API_HOST}/api/products?skip=${skip}`)
+  fetch(`${API_HOST}/api/products?skip=${skip}&limit=${API_PER_PAGE}`)
     .then(data => ndjsonStream(data.body))
     .then((stream) => {
       const streamReader = stream.getReader();
