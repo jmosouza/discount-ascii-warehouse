@@ -4,7 +4,7 @@ exports[`Dispatch ENTITIES::PRODUCTS::FETCH::NO_MORE 1`] = `
 Object {
   "products": Object {
     "all": Object {},
-    "noMore": false,
+    "hasMore": false,
   },
 }
 `;
@@ -21,7 +21,7 @@ Object {
         "size": 35,
       },
     },
-    "noMore": true,
+    "hasMore": true,
   },
 }
 `;
@@ -30,7 +30,7 @@ exports[`Dispatch UNKNOWN ACTION 1`] = `
 Object {
   "products": Object {
     "all": Object {},
-    "noMore": true,
+    "hasMore": true,
   },
 }
 `;

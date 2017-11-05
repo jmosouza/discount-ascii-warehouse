@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchProducts: ({ skip }) => dispatch(fetchProducts({ skip })),
+  fetchProducts: ({ page }) => dispatch(fetchProducts({ page })),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AsciiStore);

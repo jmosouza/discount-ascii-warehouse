@@ -25,6 +25,7 @@ module.exports = (env) => {
     plugins: [
       new webpack.DefinePlugin({
         API_HOST: JSON.stringify(apiHost),
+        API_PER_PAGE: JSON.stringify(10),
       }),
     ],
     module: {

@@ -11,10 +11,7 @@ class AsciiStore extends Component {
   }
 
   handleLoadMore(page = 0) {
-    // TODO: perPage should be in config file
-    const perPage = 10;
-    const skip = page * perPage;
-    this.props.fetchProducts({ skip });
+    this.props.fetchProducts({ page });
   }
 
   render() {

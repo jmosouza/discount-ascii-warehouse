@@ -1,4 +1,4 @@
-/* global fetch, API_HOST */
+/* global fetch, API_HOST, API_PER_PAGE */
 
 import ndjsonStream from 'can-ndjson-stream';
 
@@ -12,8 +12,9 @@ export const fetchProductsNoMore = () => ({
 });
 
 // Request products, read NDJSON stream, append products as they come through
-export default ({ skip = 0 }) => (dispatch) => {
+export default ({ page = 0 }) => (dispatch) => {
   let noMore = true;
+  const skip = page * API_PER_PAGE;
   fetch(`${API_HOST}/api/products?skip=${skip}`)
     .then(data => ndjsonStream(data.body))
     .then((stream) => {
