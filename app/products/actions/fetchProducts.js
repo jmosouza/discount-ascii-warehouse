@@ -8,8 +8,8 @@ export const fetchProductsSuccess = product => ({
 });
 
 // Request products, read NDJSON stream, append products as they come through
-export default () => (dispatch) => {
-  fetch(`${API_HOST}/api/products`)
+export default ({ skip = 0 }) => (dispatch) => {
+  fetch(`${API_HOST}/api/products?skip=${skip}`)
     .then(data => ndjsonStream(data.body))
     .then((stream) => {
       const streamReader = stream.getReader();
