@@ -1,7 +1,9 @@
 export default (hasMore = true, action) => {
   switch (action.type) {
-    case 'ENTITIES::PRODUCTS::FETCH::NO_MORE':
+    case 'PRODUCTS::NO_MORE':
       return false;
+    case 'PRODUCTS::SORT':
+      return true;
     default:
       return hasMore;
   }

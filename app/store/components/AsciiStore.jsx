@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroller';
 import ProductGrid from '../../products/components/ProductGrid';
+import ProductSort from '../../products/components/ProductSort';
 import { productCollectionPropTypes } from '../../products/components/productPropTypes';
 
 class AsciiStore extends Component {
@@ -10,8 +11,8 @@ class AsciiStore extends Component {
     this.handleLoadMore = this.handleLoadMore.bind(this);
   }
 
-  handleLoadMore(page = 0) {
-    this.props.fetchProducts({ page });
+  handleLoadMore(page) {
+    // this.props.pageProducts(this.props.currentPage + 1);
   }
 
   render() {
@@ -20,6 +21,10 @@ class AsciiStore extends Component {
         <header>
           <h1>Ascii Faces</h1>
         </header>
+        <ProductSort
+          sort={this.props.currentSort}
+          onSort={this.props.sortProducts}
+        />
         <InfiniteScroll
           pageStart={-1}
           hasMore={this.props.hasMoreProducts}
@@ -36,8 +41,11 @@ class AsciiStore extends Component {
 
 AsciiStore.propTypes = {
   products: productCollectionPropTypes.isRequired,
-  fetchProducts: PropTypes.func.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  currentSort: PropTypes.string.isRequired,
   hasMoreProducts: PropTypes.bool.isRequired,
+  pageProducts: PropTypes.func.isRequired,
+  sortProducts: PropTypes.func.isRequired,
 };
 
 export default AsciiStore;

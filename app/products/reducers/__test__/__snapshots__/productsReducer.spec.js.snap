@@ -1,15 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dispatch ENTITIES::PRODUCTS::FETCH::NO_MORE 1`] = `
-Object {
-  "products": Object {
-    "all": Object {},
-    "hasMore": false,
-  },
-}
-`;
-
-exports[`Dispatch ENTITIES::PRODUCTS::FETCH::SUCCESS 1`] = `
+exports[`Dispatch PRODUCTS::FETCH_SUCCEEDED 1`] = `
 Object {
   "products": Object {
     "all": Object {
@@ -22,6 +13,19 @@ Object {
       },
     },
     "hasMore": true,
+    "page": 0,
+    "sort": "id",
+  },
+}
+`;
+
+exports[`Dispatch PRODUCTS::NO_MORE 1`] = `
+Object {
+  "products": Object {
+    "all": Object {},
+    "hasMore": false,
+    "page": 0,
+    "sort": "id",
   },
 }
 `;
@@ -31,6 +35,8 @@ Object {
   "products": Object {
     "all": Object {},
     "hasMore": true,
+    "page": 0,
+    "sort": "id",
   },
 }
 `;
