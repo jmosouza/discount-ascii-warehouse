@@ -3,14 +3,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import reduxStore from './redux/store';
 import AsciiStore from './store/components/AsciiStore';
 
-const reducer = () => ({ entities: { products: { all: {} } } });
-const store = createStore(reducer);
-
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={reduxStore}>
     <AsciiStore />
   </Provider>,
   document.getElementById('react-app-root'),

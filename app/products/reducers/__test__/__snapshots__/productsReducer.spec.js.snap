@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dispatch ENTITIES::PRODUCTS::FETCH::SUCCESS 1`] = `
+Object {
+  "products": Object {
+    "all": Object {
+      "0-kmg1to7ttda": Object {
+        "date": "Tue Oct 24 2017 12:27:17 GMT-0300 (-03)",
+        "face": "( .-. )",
+        "id": "0-kmg1to7ttda",
+        "price": 114,
+        "size": 35,
+      },
+    },
+  },
+}
+`;
+
+exports[`Dispatch UNKNOWN ACTION 1`] = `
+Object {
+  "products": Object {
+    "all": Object {},
+  },
+}
+`;
