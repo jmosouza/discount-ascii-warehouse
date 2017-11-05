@@ -6,6 +6,7 @@ const mapStateToProps = (state) => {
   const products = Object.values(state.products.all);
   return {
     products,
+    hasMoreProducts: state.products.hasMore,
   };
 };
 

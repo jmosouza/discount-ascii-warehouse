@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dispatch ENTITIES::PRODUCTS::FETCH::NO_MORE 1`] = `
+Object {
+  "products": Object {
+    "all": Object {},
+    "noMore": false,
+  },
+}
+`;
+
 exports[`Dispatch ENTITIES::PRODUCTS::FETCH::SUCCESS 1`] = `
 Object {
   "products": Object {
@@ -12,6 +21,7 @@ Object {
         "size": 35,
       },
     },
+    "noMore": true,
   },
 }
 `;
@@ -20,6 +30,7 @@ exports[`Dispatch UNKNOWN ACTION 1`] = `
 Object {
   "products": Object {
     "all": Object {},
+    "noMore": true,
   },
 }
 `;

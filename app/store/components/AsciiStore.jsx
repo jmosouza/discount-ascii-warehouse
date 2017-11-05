@@ -25,7 +25,7 @@ class AsciiStore extends Component {
         </header>
         {/* TODO: hasMore should be in props */}
         <InfiniteScroll
-          hasMore
+          hasMore={this.props.hasMoreProducts}
           loadMore={this.handleLoadMore}
           loader={<div>Loading...</div>}
         >
@@ -39,6 +39,7 @@ class AsciiStore extends Component {
 AsciiStore.propTypes = {
   products: productCollectionPropTypes.isRequired,
   fetchProducts: PropTypes.func.isRequired,
+  hasMoreProducts: PropTypes.bool.isRequired,
 };
 
 export default AsciiStore;
