@@ -66,3 +66,8 @@ Busy with current job
 ## Hour 1
 
 - Set up proxy to work around CORS in development with webpack-dev-server
+
+## Hours 2 & 3
+
+- Set up redux
+- Fetch products with redux + specs

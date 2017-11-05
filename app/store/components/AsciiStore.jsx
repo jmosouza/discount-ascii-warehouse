@@ -1,37 +1,11 @@
-/* global fetch, API_HOST */
 import React, { Component } from 'react';
-import ndjsonStream from 'can-ndjson-stream';
+import PropTypes from 'prop-types';
 import ProductGrid from '../../products/components/ProductGrid';
+import { productCollectionPropTypes } from '../../products/components/productPropTypes';
 
 class AsciiStore extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { products: [] };
-  }
-
   componentDidMount() {
-    // TODO: some caching strategy
-    // TODO: move to a redux action
-    this.fetchProducts();
-  }
-
-  fetchProducts() {
-    // Request products, read NDJSON stream, append products as they come through
-    fetch(`${API_HOST}/api/products`)
-      .then(data => ndjsonStream(data.body))
-      .then((stream) => {
-        const streamReader = stream.getReader();
-        const readHandler = (result) => {
-          if (result.done) return;
-
-          this.setState({
-            products: this.state.products.concat(result.value),
-          });
-
-          streamReader.read().then(readHandler);
-        };
-        streamReader.read().then(readHandler);
-      });
+    this.props.fetchProducts();
   }
 
   render() {
@@ -40,10 +14,15 @@ class AsciiStore extends Component {
         <header>
           <h1>Ascii Faces</h1>
         </header>
-        <ProductGrid products={this.state.products} />
+        <ProductGrid products={this.props.products} />
       </div>
     );
   }
 }
+
+AsciiStore.propTypes = {
+  products: productCollectionPropTypes.isRequired,
+  fetchProducts: PropTypes.func.isRequired,
+};
 
 export default AsciiStore;
