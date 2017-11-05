@@ -1,4 +1,4 @@
-/* global fetch */
+/* global fetch, API_HOST */
 import React, { Component } from 'react';
 import ndjsonStream from 'can-ndjson-stream';
 import ProductGrid from '../../products/components/ProductGrid';
@@ -17,7 +17,7 @@ class AsciiStore extends Component {
 
   fetchProducts() {
     // Request products, read NDJSON stream, append products as they come through
-    fetch('http://localhost:8000/api/products', { method: 'get' })
+    fetch(`${API_HOST}/api/products`)
       .then(data => ndjsonStream(data.body))
       .then((stream) => {
         const streamReader = stream.getReader();

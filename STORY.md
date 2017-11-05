@@ -60,3 +60,9 @@ Busy with current job
 
 - Fetch NDJSON products in AsciiStore
 - Record new tech video
+
+# Day 6
+
+## Hour 1
+
+- Set up proxy to work around CORS in development with webpack-dev-server
