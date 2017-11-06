@@ -11,6 +11,7 @@ const mapStateToProps = (state) => {
     currentPage: state.products.page,
     currentSort: state.products.sort,
     hasMoreProducts: state.products.hasMore,
+    isLoadingProducts: state.products.loading > 0,
   };
 };
 

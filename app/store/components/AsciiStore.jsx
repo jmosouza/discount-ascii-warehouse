@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import InfiniteScroll from 'react-infinite-scroller';
 import ProductGrid from '../../products/components/ProductGrid';
 import ProductSort from '../../products/components/ProductSort';
 import { productCollectionPropTypes } from '../../products/components/productPropTypes';
@@ -8,11 +7,27 @@ import { productCollectionPropTypes } from '../../products/components/productPro
 class AsciiStore extends Component {
   constructor(props) {
     super(props);
-    this.handleLoadMore = this.handleLoadMore.bind(this);
+    this.fetchProducts = this.fetchProducts.bind(this);
   }
 
-  handleLoadMore(page) {
-    // this.props.pageProducts(this.props.currentPage + 1);
+  componentDidMount() {
+    this.fetchProducts();
+
+    window.onscroll = () => {
+      const preloadOffset = 2000;
+      const bottomEdge = document.body.scrollHeight;
+      const scrollBottom = window.scrollY + window.innerHeight;
+      const didReachBottom = scrollBottom + preloadOffset >= bottomEdge;
+      const isLoading = this.props.isLoadingProducts;
+      if (didReachBottom && !isLoading) {
+        this.fetchProducts();
+      }
+    };
+  }
+
+  fetchProducts() {
+    console.log(this.props.currentPage);
+    this.props.pageProducts(this.props.currentPage + 1);
   }
 
   render() {
@@ -25,14 +40,8 @@ class AsciiStore extends Component {
           sort={this.props.currentSort}
           onSort={this.props.sortProducts}
         />
-        <InfiniteScroll
-          pageStart={-1}
-          hasMore={this.props.hasMoreProducts}
-          loadMore={this.handleLoadMore}
-          loader={<div>Loading...</div>}
-        >
-          <ProductGrid products={this.props.products} />
-        </InfiniteScroll>
+        <ProductGrid products={this.props.products} />
+        {this.props.isLoadingProducts && <div>loading...</div>}
         {this.props.hasMoreProducts || <div>~ end of catalogue ~</div>}
       </div>
     );

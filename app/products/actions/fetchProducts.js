@@ -11,8 +11,18 @@ export const fetchProductsNoMore = () => ({
   type: 'PRODUCTS::NO_MORE',
 });
 
+export const fetchProductsStarted = () => ({
+  type: 'PRODUCTS::FETCH_STARTED',
+});
+
+export const fetchProductsFinished = () => ({
+  type: 'PRODUCTS::FETCH_FINISHED',
+});
+
 // Request products, read NDJSON stream, append products as they come through
 export default () => (dispatch, getState) => {
+  dispatch(fetchProductsStarted())
+
   // The state should know when the API returns no more products.
   // Set this to false when the API returns at least 1 product.
   let noMoreProducts = true;
@@ -25,6 +35,7 @@ export default () => (dispatch, getState) => {
       const streamReader = stream.getReader();
       const readHandler = (result) => {
         if (result.done) {
+          dispatch(fetchProductsFinished())
           if (noMoreProducts) dispatch(fetchProductsNoMore());
           return;
         }
