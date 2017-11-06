@@ -8,6 +8,8 @@ export default (loading = 0, action) => {
       return Math.min(0, loading - 1);
     case 'PRODUCTS::SORT':
       return 0;
+    case 'PRODUCTS::NO_MORE':
+      return 0;
     default:
       return loading;
   }
