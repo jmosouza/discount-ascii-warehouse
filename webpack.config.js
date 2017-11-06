@@ -24,6 +24,7 @@ module.exports = (env) => {
     },
     plugins: [
       new webpack.DefinePlugin({
+        AD_HOST: JSON.stringify('http://localhost:8000'),
         API_HOST: JSON.stringify(apiHost),
         API_PER_PAGE: JSON.stringify(10),
       }),
