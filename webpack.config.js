@@ -5,7 +5,7 @@ module.exports = (env) => {
   // In development, webpack-dev-server serves the react app, thus CORS prevents requests to server.
   // As a workaround in dev, the react app makes requests to a proxy. See proxy.js
   const apiHost = env && env.production
-    ? 'http://localhost:8000'
+    ? ''
     : 'http://localhost:8080/http://localhost:8000';
 
   return {
@@ -21,10 +21,11 @@ module.exports = (env) => {
       inline: true,
       contentBase: `${__dirname}/static`,
       port: 3333,
+      host: '0.0.0.0',
     },
     plugins: [
       new webpack.DefinePlugin({
-        AD_HOST: JSON.stringify('http://localhost:8000'),
+        AD_HOST: JSON.stringify(''),
         API_HOST: JSON.stringify(apiHost),
         API_PER_PAGE: JSON.stringify(20),
       }),
