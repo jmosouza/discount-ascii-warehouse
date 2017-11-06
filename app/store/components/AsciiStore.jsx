@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ProductGrid from '../../products/components/ProductGrid';
 import ProductSort from '../../products/components/ProductSort';
+import Loading from '../../elements/Loading';
+import EndOfCatalogue from '../../elements/EndOfCatalogue';
 import { productCollectionPropTypes } from '../../products/components/productPropTypes';
 
 class AsciiStore extends Component {
@@ -31,6 +33,14 @@ class AsciiStore extends Component {
   }
 
   render() {
+    const {
+      currentSort,
+      sortProducts,
+      products,
+      isLoadingProducts,
+      hasMoreProducts,
+    } = this.props;
+
     return (
       <section className="section">
         <div className="container">
@@ -38,12 +48,12 @@ class AsciiStore extends Component {
             <h1>Ascii Faces</h1>
           </header>
           <ProductSort
-            sort={this.props.currentSort}
-            onSort={this.props.sortProducts}
+            sort={currentSort}
+            onSort={sortProducts}
           />
-          <ProductGrid products={this.props.products} />
-          {this.props.isLoadingProducts && <div>loading...</div>}
-          {this.props.hasMoreProducts || <div>~ end of catalogue ~</div>}
+          <ProductGrid products={products} />
+          {isLoadingProducts && <Loading />}
+          {hasMoreProducts || <EndOfCatalogue />}
         </div>
       </section>
     );
