@@ -6,7 +6,7 @@ const sortOptions = ['id', 'price', 'size'];
 
 const ProductSort = ({ selectedOption, onSort }) => (
   <div className="level">
-    <div className="level-left">
+    <div className="level-left has-text-centered">
       <span className="level-item">Sort:</span>
       {sortOptions.map(option => (
         <ProductSortOption
