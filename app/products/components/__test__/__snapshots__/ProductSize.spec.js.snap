@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProductSize 1`] = `
-<p>
+<span>
   Size: 
   12
-</p>
+</span>
 `;

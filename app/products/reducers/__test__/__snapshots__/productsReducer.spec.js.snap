@@ -13,6 +13,7 @@ Object {
       },
     },
     "hasMore": true,
+    "loading": 0,
     "page": 0,
     "sort": "id",
   },
@@ -24,6 +25,7 @@ Object {
   "products": Object {
     "all": Object {},
     "hasMore": false,
+    "loading": 0,
     "page": 0,
     "sort": "id",
   },
@@ -35,6 +37,7 @@ Object {
   "products": Object {
     "all": Object {},
     "hasMore": true,
+    "loading": 0,
     "page": 0,
     "sort": "id",
   },

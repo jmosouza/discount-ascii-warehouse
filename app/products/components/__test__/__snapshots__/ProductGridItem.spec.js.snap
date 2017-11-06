@@ -1,26 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProductGridItem 1`] = `
-<div>
-  <p
-    style={
-      Object {
-        "fontSize": 22,
-      }
-    }
+<div
+  className="column is-6"
+>
+  <div
+    className="card has-text-centered"
   >
-    ( .-. )
-  </p>
-  <p>
-    Size: 
-    22
-  </p>
-  <p>
-    $
-    27.00
-  </p>
-  <p>
-    1 hour ago
-  </p>
+    <div
+      className="card-content"
+      style={
+        Object {
+          "height": 100,
+        }
+      }
+    >
+      <p
+        className="title"
+      >
+        <span
+          style={
+            Object {
+              "fontSize": 22,
+            }
+          }
+        >
+          ( .-. )
+        </span>
+      </p>
+    </div>
+    <div
+      className="card-footer"
+      style={
+        Object {
+          "height": 50,
+        }
+      }
+    >
+      <p
+        className="card-footer-item"
+      >
+        <span>
+          1 hour ago
+        </span>
+      </p>
+      <p
+        className="card-footer-item"
+      >
+        <a>
+          <span>
+            $
+            27.00
+          </span>
+        </a>
+      </p>
+    </div>
+  </div>
 </div>
 `;
