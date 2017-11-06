@@ -1,20 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ProductSortOption from './ProductSortOption';
 
 const sortOptions = ['id', 'price', 'size'];
 
-const ProductSort = ({ onSort }) => (
-  <div>
-    Sort:
-    {sortOptions.map(option => (
-      <button key={option} onClick={() => onSort(option)}>
-        {option}
-      </button>
+const ProductSort = ({ selectedOption, onSort }) => (
+  <div className="level">
+    <div className="level-left">
+      <span className="level-item">Sort:</span>
+      {sortOptions.map(option => (
+        <ProductSortOption
+          option={option}
+          onSort={onSort}
+          selected={option === selectedOption}
+        />
     ))}
+    </div>
   </div>
 );
 
 ProductSort.propTypes = {
+  selectedOption: PropTypes.string.isRequired,
   onSort: PropTypes.func.isRequired,
 };
 

@@ -16,7 +16,7 @@ class AsciiStore extends Component {
     this.fetchProducts();
 
     window.onscroll = () => {
-      const preloadOffset = 2000;
+      const preloadOffset = 4000;
       const bottomEdge = document.body.scrollHeight;
       const scrollBottom = window.scrollY + window.innerHeight;
       const didReachBottom = scrollBottom + preloadOffset >= bottomEdge;
@@ -34,9 +34,9 @@ class AsciiStore extends Component {
 
   render() {
     const {
+      products,
       currentSort,
       sortProducts,
-      products,
       isLoadingProducts,
       hasMoreProducts,
     } = this.props;
@@ -44,13 +44,7 @@ class AsciiStore extends Component {
     return (
       <section className="section">
         <div className="container">
-          <header>
-            <h1>Ascii Faces</h1>
-          </header>
-          <ProductSort
-            sort={currentSort}
-            onSort={sortProducts}
-          />
+          <ProductSort onSort={sortProducts} selectedOption={currentSort} />
           <ProductGrid products={products} />
           {isLoadingProducts && <Loading />}
           {hasMoreProducts || <EndOfCatalogue />}
