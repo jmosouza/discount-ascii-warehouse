@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProductGridItem from './ProductGridItem';
 import { productCollectionPropTypes } from './productPropTypes';
+import Ad from '../../ads/components/Ad';
 
 const ProductGrid = ({ products }) => (
   <div className="columns is-multiline">
@@ -13,21 +14,7 @@ const ProductGrid = ({ products }) => (
       if ((index + 1) % 20 === 0) {
         // TODO: Needs better random
         const random = index;
-        ad = (
-          <div key={random} className="column is-one-third">
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-clipped" style={{ height: 150 }}>
-                  <img
-                    alt="Ad"
-                    className="ad"
-                    src={`${AD_HOST}/ad?r=${random}`}
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-      );
+        ad = <Ad random={random} />;
       }
       return array.concat(productGridItem, ad);
     }, [])}

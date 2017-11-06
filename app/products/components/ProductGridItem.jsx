@@ -8,7 +8,7 @@ import { productPropTypes } from './productPropTypes';
 const ProductGridItem = ({
   id, size, price, face, date,
 }) => (
-  <div key={id} className="column is-one-third">
+  <div key={id} className="column is-6">
     <div className="card has-text-centered">
       <div className="card-content" style={{ height: 100 }}>
         <p className="title">
@@ -20,7 +20,7 @@ const ProductGridItem = ({
           <ProductDate date={date} />
         </p>
         <p className="card-footer-item">
-          <ProductPrice price={price} />
+          <a><ProductPrice price={price} /></a>
         </p>
       </div>
     </div>
