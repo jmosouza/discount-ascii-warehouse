@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ProductFace = ({ size, face }) => (
-  <p style={{ fontSize: size }}>{face}</p>
+  <span style={{ fontSize: size }}>{face}</span>
 );
 
 ProductFace.propTypes = {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import relativeDateInterval from '../../utils/relativeDateInterval';
 
 const ProductDate = ({ date }) => (
-  <p>{relativeDateInterval({ dateStr: date })}</p>
+  <span>{relativeDateInterval({ dateStr: date })}</span>
 );
 
 ProductDate.propTypes = {

@@ -26,11 +26,11 @@ module.exports = (env) => {
       new webpack.DefinePlugin({
         AD_HOST: JSON.stringify('http://localhost:8000'),
         API_HOST: JSON.stringify(apiHost),
-        API_PER_PAGE: JSON.stringify(10),
+        API_PER_PAGE: JSON.stringify(20),
       }),
     ],
     module: {
-      loaders: [{
+      rules: [{
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
@@ -39,6 +39,16 @@ module.exports = (env) => {
             presets: ['es2015', 'react'],
           },
         },
+      }, {
+        test: /\.sass$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: 'style-loader', // creates style nodes from JS strings
+        }, {
+          loader: 'css-loader', // translates CSS into CommonJS
+        }, {
+          loader: 'sass-loader', // compiles Sass to CSS
+        }],
       }],
     },
   };

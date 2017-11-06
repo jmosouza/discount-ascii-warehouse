@@ -8,11 +8,22 @@ import { productPropTypes } from './productPropTypes';
 const ProductGridItem = ({
   id, size, price, face, date,
 }) => (
-  <div key={id}>
-    <ProductFace face={face} size={size} />
-    <ProductSize size={size} />
-    <ProductPrice price={price} />
-    <ProductDate date={date} />
+  <div key={id} className="column is-one-third">
+    <div className="card has-text-centered">
+      <div className="card-content" style={{ height: 100 }}>
+        <p className="title">
+          <ProductFace face={face} size={size} />
+        </p>
+      </div>
+      <div className="card-footer" style={{ height: 50 }}>
+        <p className="card-footer-item">
+          <ProductDate date={date} />
+        </p>
+        <p className="card-footer-item">
+          <ProductPrice price={price} />
+        </p>
+      </div>
+    </div>
   </div>
 );
 

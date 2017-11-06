@@ -32,18 +32,20 @@ class AsciiStore extends Component {
 
   render() {
     return (
-      <div>
-        <header>
-          <h1>Ascii Faces</h1>
-        </header>
-        <ProductSort
-          sort={this.props.currentSort}
-          onSort={this.props.sortProducts}
-        />
-        <ProductGrid products={this.props.products} />
-        {this.props.isLoadingProducts && <div>loading...</div>}
-        {this.props.hasMoreProducts || <div>~ end of catalogue ~</div>}
-      </div>
+      <section className="section">
+        <div className="container">
+          <header>
+            <h1>Ascii Faces</h1>
+          </header>
+          <ProductSort
+            sort={this.props.currentSort}
+            onSort={this.props.sortProducts}
+          />
+          <ProductGrid products={this.props.products} />
+          {this.props.isLoadingProducts && <div>loading...</div>}
+          {this.props.hasMoreProducts || <div>~ end of catalogue ~</div>}
+        </div>
+      </section>
     );
   }
 }

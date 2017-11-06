@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ProductSize = ({ size }) => (
-  <p>Size: {size}</p>
+  <span>Size: {size}</span>
 );
 
 ProductSize.propTypes = {

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ProductPrice = ({ price }) => (
-  <p>${price.toFixed(2)}</p>
+  <span>${price.toFixed(2)}</span>
 );
 
 ProductPrice.propTypes = {

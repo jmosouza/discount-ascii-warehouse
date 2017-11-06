@@ -72,3 +72,11 @@ Busy with current job
 - Set up redux
 - Fetch products with redux + specs
 - InfiniteScroll
+
+# Day 7
+
+## Hours 1 & 2
+
+- Install Bulma (CSS framework)
+- Experiment different grid components
+- Style product grid using columns and cards
