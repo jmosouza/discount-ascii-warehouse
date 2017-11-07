@@ -6,6 +6,7 @@ exports[`ProductGrid 1`] = `
 >
   <div
     className="column is-6"
+    id="0-kmg1to7ttda"
   >
     <div
       className="card has-text-centered"
@@ -62,6 +63,7 @@ exports[`ProductGrid 1`] = `
   </div>
   <div
     className="column is-6"
+    id="1-uq52ro7hh3a"
   >
     <div
       className="card has-text-centered"
@@ -118,6 +120,7 @@ exports[`ProductGrid 1`] = `
   </div>
   <div
     className="column is-6"
+    id="2-kixa14dmqaa"
   >
     <div
       className="card has-text-centered"
@@ -174,6 +177,7 @@ exports[`ProductGrid 1`] = `
   </div>
   <div
     className="column is-6"
+    id="3-53gsauxs2tn"
   >
     <div
       className="card has-text-centered"
@@ -230,6 +234,7 @@ exports[`ProductGrid 1`] = `
   </div>
   <div
     className="column is-6"
+    id="4-p2ao8104bd9"
   >
     <div
       className="card has-text-centered"
@@ -286,6 +291,7 @@ exports[`ProductGrid 1`] = `
   </div>
   <div
     className="column is-6"
+    id="5-eba70ah0kp6"
   >
     <div
       className="card has-text-centered"
@@ -342,6 +348,7 @@ exports[`ProductGrid 1`] = `
   </div>
   <div
     className="column is-6"
+    id="6-vxb0xq0hcom"
   >
     <div
       className="card has-text-centered"
@@ -398,6 +405,7 @@ exports[`ProductGrid 1`] = `
   </div>
   <div
     className="column is-6"
+    id="7-0bepqhppuz5j"
   >
     <div
       className="card has-text-centered"
@@ -454,6 +462,7 @@ exports[`ProductGrid 1`] = `
   </div>
   <div
     className="column is-6"
+    id="8-d44oc6ofo7m"
   >
     <div
       className="card has-text-centered"
@@ -510,6 +519,7 @@ exports[`ProductGrid 1`] = `
   </div>
   <div
     className="column is-6"
+    id="9-3krjuzvy29w"
   >
     <div
       className="card has-text-centered"

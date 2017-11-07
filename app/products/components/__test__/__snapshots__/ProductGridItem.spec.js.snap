@@ -3,6 +3,7 @@
 exports[`ProductGridItem 1`] = `
 <div
   className="column is-6"
+  id="0-8gbbh9bm9qc"
 >
   <div
     className="card has-text-centered"
