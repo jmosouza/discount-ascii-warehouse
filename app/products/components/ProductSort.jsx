@@ -10,6 +10,7 @@ const ProductSort = ({ selectedOption, onSort }) => (
       <span className="level-item">Sort:</span>
       {sortOptions.map(option => (
         <ProductSortOption
+          key={option}
           option={option}
           onSort={onSort}
           selected={option === selectedOption}

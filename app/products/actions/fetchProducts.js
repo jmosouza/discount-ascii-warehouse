@@ -2,9 +2,9 @@
 
 import ndjsonStream from 'can-ndjson-stream';
 
-export const fetchProductsSuccess = product => ({
+export const fetchProductsSucceeded = products => ({
   type: 'PRODUCTS::FETCH_SUCCEEDED',
-  product,
+  products,
 });
 
 export const fetchProductsNoMore = () => ({
@@ -21,11 +21,13 @@ export const fetchProductsFinished = () => ({
 
 // Request products, read NDJSON stream, append products as they come through
 export default () => (dispatch, getState) => {
-  dispatch(fetchProductsStarted())
+  dispatch(fetchProductsStarted());
 
   // The state should know when the API returns no more products.
   // Set this to false when the API returns at least 1 product.
   let noMoreProducts = true;
+
+  const products = {};
 
   const { page, sort } = getState().products;
   const skip = page * API_PER_PAGE;
@@ -35,7 +37,8 @@ export default () => (dispatch, getState) => {
       const streamReader = stream.getReader();
       const readHandler = (result) => {
         if (result.done) {
-          dispatch(fetchProductsFinished())
+          dispatch(fetchProductsSucceeded(products));
+          dispatch(fetchProductsFinished());
           if (noMoreProducts) dispatch(fetchProductsNoMore());
           return;
         }
@@ -43,7 +46,8 @@ export default () => (dispatch, getState) => {
         // There is at least 1 product
         noMoreProducts = false;
 
-        dispatch(fetchProductsSuccess(result.value));
+        products[result.value.id] = (result.value);
+
         streamReader.read().then(readHandler);
       };
       streamReader.read().then(readHandler);

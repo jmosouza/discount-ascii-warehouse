@@ -6,11 +6,7 @@ import uniqueRandomNumber from '../../utils/uniqueRandomNumber';
 class Ad extends Component {
   constructor() {
     super();
-    this.state = {};
-  }
-
-  componentDidMount() {
-    this.setState({ random: uniqueRandomNumber() });
+    this.state = { random: uniqueRandomNumber() };
   }
 
   render() {

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const ProductSortOption = ({ onSort, option, selected }) => (
   <button
-    key={option}
     className={`level-item button ${selected ? 'is-dark' : 'is-text'}`}
     onClick={() => onSort(option)}
   >

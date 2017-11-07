@@ -7,10 +7,10 @@ const shouldInsertAd = index => (index + 1) % 20 === 0;
 
 const ProductGrid = ({ products }) => (
   <div className="columns is-multiline">
-    {products.reduce((array, product, index) => array.concat(
-      <ProductGridItem {...product} />,
-      shouldInsertAd(index) && <Ad />,
-    ), [])}
+    {products.map((product, index) => ([
+      <ProductGridItem key={product.id} {...product} />,
+      shouldInsertAd(index) && <Ad key={index} />,
+    ]))}
   </div>
 );
 

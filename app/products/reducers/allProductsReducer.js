@@ -3,7 +3,7 @@ export default (all = {}, action) => {
     case 'PRODUCTS::FETCH_SUCCEEDED':
       return {
         ...all,
-        [action.product.id]: action.product,
+        ...action.products,
       };
     case 'PRODUCTS::SORT':
       return {};
